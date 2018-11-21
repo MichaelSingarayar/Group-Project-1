@@ -1,0 +1,173 @@
+body {
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: url("http://www.browniebites.net/wp-content/uploads/2013/07/smoky-mountain-hiking-trails-charlies-bunion-03.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.hero-full-screen .middle-content-section {
+    text-align: center;
+    color: beige;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.hero-full-screen .top-content-section {
+    width: 100%;
+}
+
+.hero-full-screen .bottom-content-section {
+    padding: 1rem;
+}
+
+.hero-full-screen .bottom-content-section svg {
+    height: 3.75rem;
+    width: 3.75rem;
+    fill: beige;
+}
+
+.hero-full-screen .top-bar {
+    background: transparent;
+}
+
+.hero-full-screen .top-bar .menu {
+    background: transparent;
+}
+
+.hero-full-screen .top-bar .menu-text {
+    color: beige;
+    font-size: 2rem;
+}
+
+.hero-full-screen .top-bar .menu li {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.hero-full-screen .top-bar .menu a {
+    color: beige;
+    font-weight: bold;
+}
+
+
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}
+
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
+
+
+.flip-card {
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    border: 0;
+    background: transparent;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.hover .flip-card-inner {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flip-card,
+.flip-card-inner-front,
+.flip-card-inner-back {
+    width: 100%;
+    height: 20rem;
+}
+
+.flip-card-inner {
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-inner-front,
+.flip-card-inner-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flip-card-inner-front {
+    background: url(https://images.pexels.com/photos/179124/pexels-photo-179124.jpeg?w=940&h=650&auto=compress&cs=tinysrg) 0 0 no-repeat;
+    z-index: 2;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flip-card-inner-front span {
+    width: 100%;
+    text-align: center;
+    background: rgba(254, 254, 254, 0.8);
+    padding: 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.flip-card-inner-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    background: #cacaca;
+    padding: 1rem;
+}
+
+.flip-card-inner-back-title {
+    font-weight: bold;
+}
+
+.flip-card-inner-back-text {
+    line-height: 1.3;
+}

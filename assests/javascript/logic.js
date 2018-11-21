@@ -1,4 +1,7 @@
+$(document).foundation();
+
 $(document).ready(function () {
+  
 
 
     // Initialize Firebase
