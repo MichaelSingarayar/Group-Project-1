@@ -14,8 +14,7 @@ $(document).ready(function () {
 
 
 
-  
-  //Initailze Redit API
+ //Initailze Redit API
 
   var redditJSON = "https://old.reddit.com/r/coloradohikers.json";
 
@@ -29,14 +28,7 @@ $(document).ready(function () {
 
   });
 
-
-
-  
-  
-  
-  
-  
-  // Initaialize API
+// Initaialize API
 
   var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
 
@@ -49,10 +41,9 @@ $(document).ready(function () {
     console.log(response.trails[0].conditionStatus);
 
 
-    
-  
 
-  for (var i = 0; i < response.trails.length; i++) {
+    for (var i = 0; i < response.trails.length; i++) {
+
 
     console.log(response.trails[i].name);
     console.log(response.trails[i].summary);
