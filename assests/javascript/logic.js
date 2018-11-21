@@ -13,17 +13,42 @@ $(document).ready(function () {
   firebase.initializeApp(config);
 
 
+  // Initialize Reddit API
+
+  var redditJSON = "https://old.reddit.com/r/coloradohikers.json";
+  
+
+
+    $.ajax({
+      url: redditJSON,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+
+      console.log(response.data.children[0].title);
+
+    });
+  
+
+
+
+
     
-  // Initaialize API
+  // Initaialize Rei API
   var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
 
-
+  
     $.ajax({
         url: queryURL,
         method: "GET"
       }).then(function(response) {
         console.log(response);
       });
+
+
+      // function(response)
+      // console.log(response.data.children);
+    
 
 
 
