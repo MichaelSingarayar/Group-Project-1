@@ -115,8 +115,10 @@ $(document).ready(function () {
     console.log("image"+ image);
     
     var name = $("<p>").text(response.trails[i].name);
+    name.addClass("align-center");
+    var b = $("<br><br>");
   
-    divBody.append(image,name);
+    divBody.append(image,name,b);
     $("#first").append(divBody);
 
     
@@ -139,7 +141,7 @@ $(document).ready(function () {
 
 });
 
-$(".search-results").hide();
+//$(".search-results").hide();
 
 $(".submit").on("click", function () {
 
