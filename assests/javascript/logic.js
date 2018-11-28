@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 
 
- //Initailze Redit API
+ //Initailze Reddit API
 
   var redditJSON = "https://old.reddit.com/r/coloradohikers.json";
 
@@ -55,16 +55,27 @@ $(document).ready(function () {
 
       var tRow = $("<tr>");
 
-      var postTitle = $("<td>").text(response.data.children[i].data.title);
-      var authorName = $("<td>").text(response.data.children[i].data.author);
+      // Merging the URL for the post with the title of the post.
+      var postTitle = (response.data.children[i].data.title);
+      var postURL = (response.data.children[i].data.url);
+
+      var postLink = '<td><a href="' + postURL + '">"' + postTitle + '"</a></td>';
+
+      // Merging the URL for the comments to a dedicated "comments" link
+
+      var commentsURL = "https://www.reddit.com" + (response.data.children[i].data.permalink);
+
       var numComments = $("<td>").text(response.data.children[i].data.num_comments);
-      var postURL = $("<td>").text(response.data.children[i].data.url);
-      var subredditName = $("<td>").text(response.data.children[i].data.subreddit);
+      var commentSect = '<td><a href="' + commentsURL + '">Comments</a></td>';     
+      
+      // var authorName = $("<td>").text(response.data.children[i].data.author);
+      // var subredditName = $("<td>").text(response.data.children[i].data.subreddit);
+
       var postScore = $("<td>").text(response.data.children[i].data.score);
 
-      tRow.append(postTitle, authorName, numComments, postURL, subredditName, postScore);
+      tRow.append(postScore, postLink, numComments, commentSect);
 
-      $("tbody").append(tRow);
+      $(".reddit").append(tRow);
 
 
     }
