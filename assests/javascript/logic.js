@@ -26,7 +26,36 @@ $(document).ready(function () {
     method: "GET"
   }).then(function (response) {
 
+    console.log(response);
     console.log(response.data.children[0].data);
+
+
+    for (var i = 0; i < response.data.children.length; i++) {
+      
+      console.log(response.data.children[i].data.title);
+      // console.log(response.data.children[i].data.selftext);
+      console.log(response.data.children[i].data.author);
+      console.log(response.data.children[i].data.num_comments);
+      console.log(response.data.children[i].data.url);
+      console.log(response.data.children[i].data.subreddit);
+      console.log(response.data.children[i].data.score);
+      
+
+      var tRow = $("<tr>");
+
+      var postTitle = $("<td>").text(response.data.children[i].data.title);
+      var authorName = $("<td>").text(response.data.children[i].data.author);
+      var numComments = $("<td>").text(response.data.children[i].data.num_comments);
+      var postURL = $("<td>").text(response.data.children[i].data.url);
+      var subredditName = $("<td>").text(response.data.children[i].data.subreddit);
+      var postScore = $("<td>").text(response.data.children[i].data.score);
+
+      tRow.append(postTitle, authorName, numComments, postURL, subredditName, postScore);
+
+      $("tbody").append(tRow);
+
+
+    }
     
 
   });
