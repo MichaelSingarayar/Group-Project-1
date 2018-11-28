@@ -29,6 +29,7 @@ $(document).ready(function () {
 
 
 
+
  //Initailze Reddit API
 
   var redditJSON = "https://old.reddit.com/r/coloradohikers.json";
@@ -143,6 +144,12 @@ $(document).ready(function () {
 
     var starTd = $("<td>").text(response.trails[i].stars);
 
+
+    tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
+
+    $("tbody").append(tRow);
+
+
     tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
 
     $("tbody").append(tRow);
@@ -166,13 +173,18 @@ $(document).ready(function () {
 
   
    
-    
 
+    
 
   };
 
 
-  
+  };
+});
+
+
+
+});
 
 
  
@@ -192,6 +204,9 @@ $(".submit").on("click", function () {
 });
 
 
+
+  
+  
 
   
   
