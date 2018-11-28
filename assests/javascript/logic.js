@@ -80,5 +80,12 @@ $(document).ready(function () {
   };
 });
 
+$(".search-results").hide();
+
+$(".submit").on("click", function () {
+
+  $(".search-results").show();
+})
+
 
 });

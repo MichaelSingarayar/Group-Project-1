@@ -251,10 +251,24 @@ h2 {
     color: darkgreen;
 }
 
+.exploreWidget {
+    padding: 5px 5px 5px 45px;
+    margin: 50px;
+    border-color: black;
+
+}
+
+.content {
+    padding: 30px;
+    margin: 15px;
+    background: url(/assests/halftone.png);
+    background-size: cover;
+    height: 100%;
+}
 
 .social-footer {
     padding: 1rem;
-    background: #8a8a8a;
+    background: darkgreen;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -264,6 +278,9 @@ h2 {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  #footMtn {
+    color: white;
   }
   
   .social-footer .social-footer-icons li:last-of-type {
@@ -279,138 +296,103 @@ h2 {
     color: #4a4a4a;
     transition: color 0.3s ease-in;
   }
-
-  .rounded-social-buttons {
-    text-align: center;
-  }
-  
-  .rounded-social-buttons .social-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 3.125rem;
-    height: 3.125rem;
-    border: 0.125rem solid transparent;
-    padding: 0;
-    text-decoration: none;
-    text-align: center;
-    color: #fefefe;
-    font-size: 1.5625rem;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-    -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  
-  .rounded-social-buttons .social-button.facebook {
-    background: #3b5998;
-  }
-  
-  .rounded-social-buttons .social-button.facebook:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
-    color: #3b5998;
-    background: #fefefe;
-    border-color: #3b5998;
-  }
-  
-  .rounded-social-buttons .social-button.twitter {
-    background: #55acee;
-  }
-  
-  .rounded-social-buttons .social-button.twitter:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
-    color: #55acee;
-    background: #fefefe;
-    border-color: #55acee;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin {
-    background: #007bb5;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
-    color: #007bb5;
-    background: #fefefe;
-    border-color: #007bb5;
-  }
-  
-  .rounded-social-buttons .social-button.youtube {
-    background: #bb0000;
-  }
-  
-  .rounded-social-buttons .social-button.youtube:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
-    color: #bb0000;
-    background: #fefefe;
-    border-color: #bb0000;
-  }
-  
-  .rounded-social-buttons .social-button.instagram {
-    background: #125688;
-  }
-  
-  .rounded-social-buttons .social-button.instagram:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
-    color: #125688;
-    background: #fefefe;
-    border-color: #125688;
-  }
-  
-  .rounded-social-buttons .social-button.github {
-    background: #000000;
-  }
-  
-  .rounded-social-buttons .social-button.github:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
-    color: #000000;
-    background: #fefefe;
-    border-color: #000000;
-  }
-
-.exploreWidget {
-    padding: 5px 5px 5px 45px;
-    margin: 50px;
-    border-color: black;
-
+  /* @charset "UTF-8"; */
+.rounded-social-buttons {
+  text-align: center;
 }
-
-.content {
-    padding: 25px;
-    margin: 15px;
-    background: url(/assests/halftone.png);
-    background-size: cover;
-    height: 100%;
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
 }
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+.rounded-social-buttons .social-button.facebook:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+.rounded-social-buttons .social-button.twitter:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+.rounded-social-buttons .social-button.linkedin:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+.rounded-social-buttons .social-button.youtube:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+.rounded-social-buttons .social-button.instagram:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
+.rounded-social-buttons .social-button.github {
+  background: #000000;
+}
+.rounded-social-buttons .social-button.github:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}  
