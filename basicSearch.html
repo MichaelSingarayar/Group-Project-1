@@ -28,7 +28,7 @@
                                 <li class="menu-text"><a href="index.html"><i class="fas fa-mountain"></i></a></li>
                                 <li><a href="explore.html">Explore</a></li>
                                 <li><a href="discussion.html">Discussion</a></li>
-                                <li><a href="basicSearch.html">Advanced Search</a></li>
+                                <!-- <li><a href="basicSearch.html">Advanced Search</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -44,109 +44,52 @@
         </div>
     </div>
 
+    <div class="container content align-center">
+        <h2 class="search text-center">Search</h2>
+        <form class="basic-search text-center">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x align-center">
+                    <div class="medium-4 cell">
+                        <label>City, State, Or Zip Code
+                            <input class="input-field" type="text" placeholder="City, State, Or Zip Code">
+                        </label>
 
-    <h2 class="search">Search</h2>
-    <form class="basic-search">
-        <div class="grid-container">
-            <div class="grid-x grid-padding-x">
-                <div class="medium-4 cell">
-                    <label>City, State, Or Zip Code
-                        <input class="input-field" type="text" placeholder="City, State, Or Zip Code">
-                    </label>
+                    </div>
+
                 </div>
+                <a class="button success submit text-center" href="#">Submit</a>
             </div>
-            <a class="button success submit" href="#">Submit</a>
-        </div>
-    </form>
+        </form>
 
-    <div class="featured-image-block-grid search-results">
-        <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
-            <h2>Results</h2>
-            <p>Top Trails for your area.</p>
-        </div>
-        
-        <div class="row large-up-4 small-up-2">
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img class="first" src="https://unsplash.it/600/440?image=899" />
-                    <p class="text-center featured-image-block-title">New York</p>
-                </a>
-            </div>
-            
-
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img class="second" src="https://unsplash.it/600/440?image=693" />
-                    <p class="text-center featured-image-block-title">San Francisco</p>
-                </a>
+        <div class="featured-image-block-grid search-results">
+            <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+                <h2>Results</h2>
+                <p>Top Trails for your area.</p>
             </div>
 
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=452" />
-                    <p class="text-center featured-image-block-title">Las Vegas</p>
-                </a>
+            <br><br>
+
+
+
+            <div id="first" class="featured-image-block column align-center">
+
+
             </div>
 
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=792" />
-                    <p class="text-center featured-image-block-title">Sacramento</p>
-                </a>
-            </div>
-
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=667" />
-                    <p class="text-center featured-image-block-title">Los Angeles</p>
-                </a>
-            </div>
-
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=249" />
-                    <p class="text-center featured-image-block-title">Chicago</p>
-                </a>
-            </div>
-
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=382" />
-                    <p class="text-center featured-image-block-title">Boston</p>
-                </a>
-            </div>
-
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=1075" />
-                    <p class="text-center featured-image-block-title">Seattle</p>
-                </a>
-            </div>
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=382" />
-                    <p class="text-center featured-image-block-title">Boston</p>
-                </a>
-            </div>
-
-            <div class="featured-image-block column">
-                <a href="#">
-                    <img src="https://unsplash.it/600/440?image=1075" />
-                    <p class="text-center featured-image-block-title">Seattle</p>
-                </a>
-            </div>
-        </div>
-    </div>
 
 
 
 
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
-        crossorigin="anonymous"></script>
-    <script src="./assests/javascript/logic.js"></script>
+
+
+
+
+            <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
+                crossorigin="anonymous"></script>
+            <script src="./assests/javascript/logic.js"></script>
 </body>
 
 </html>

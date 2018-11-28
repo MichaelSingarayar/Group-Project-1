@@ -35,6 +35,8 @@ h1 {
 h2 {
     font-size: 4rem;
     color: darkgreen;
+    padding: 5px;
+    margin: 10px;
 }
 
 .hero-full-screen .top-content-section {
@@ -80,6 +82,9 @@ h2 {
 
 #main-content-section {
     color: darkgreen;
+    background: url(/assests/halftone.png) center center no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 
@@ -112,8 +117,8 @@ h2 {
     color: #404040;
   }
   
-  .featured-image-block a:hover p {
-    color: #1779ba;
+  .featured-image-block a p {
+    color: darkgreen;
   }
   
 
@@ -246,10 +251,24 @@ h2 {
     color: darkgreen;
 }
 
+.exploreWidget {
+    padding: 5px 5px 5px 45px;
+    margin: 50px;
+    border-color: black;
+
+}
+
+.content {
+    padding: 30px;
+    margin: 15px;
+    background: url(/assests/halftone.png);
+    background-size: cover;
+    height: 100%;
+}
 
 .social-footer {
     padding: 1rem;
-    background: #8a8a8a;
+    background: darkgreen;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -259,6 +278,9 @@ h2 {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  #footMtn {
+    color: white;
   }
   
   .social-footer .social-footer-icons li:last-of-type {
@@ -274,221 +296,103 @@ h2 {
     color: #4a4a4a;
     transition: color 0.3s ease-in;
   }
-
-  .rounded-social-buttons {
-    text-align: center;
-  }
-  
-  .rounded-social-buttons .social-button {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 3.125rem;
-    height: 3.125rem;
-    border: 0.125rem solid transparent;
-    padding: 0;
-    text-decoration: none;
-    text-align: center;
-    color: #fefefe;
-    font-size: 1.5625rem;
-    font-weight: normal;
-    line-height: 2em;
-    border-radius: 1.6875rem;
-    transition: all 0.5s ease;
-    margin-right: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-    -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  
-  .rounded-social-buttons .social-button.facebook {
-    background: #3b5998;
-  }
-  
-  .rounded-social-buttons .social-button.facebook:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
-    color: #3b5998;
-    background: #fefefe;
-    border-color: #3b5998;
-  }
-  
-  .rounded-social-buttons .social-button.twitter {
-    background: #55acee;
-  }
-  
-  .rounded-social-buttons .social-button.twitter:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
-    color: #55acee;
-    background: #fefefe;
-    border-color: #55acee;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin {
-    background: #007bb5;
-  }
-  
-  .rounded-social-buttons .social-button.linkedin:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
-    color: #007bb5;
-    background: #fefefe;
-    border-color: #007bb5;
-  }
-  
-  .rounded-social-buttons .social-button.youtube {
-    background: #bb0000;
-  }
-  
-  .rounded-social-buttons .social-button.youtube:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
-    color: #bb0000;
-    background: #fefefe;
-    border-color: #bb0000;
-  }
-  
-  .rounded-social-buttons .social-button.instagram {
-    background: #125688;
-  }
-  
-  .rounded-social-buttons .social-button.instagram:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
-    color: #125688;
-    background: #fefefe;
-    border-color: #125688;
-  }
-  
-  .rounded-social-buttons .social-button.github {
-    background: #000000;
-  }
-  
-  .rounded-social-buttons .social-button.github:before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  
-  .rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
-    color: #000000;
-    background: #fefefe;
-    border-color: #000000;
-  }
-
-  
-    
-  
-  
-  
-  
-
-
-/* .flip-card {
-    -webkit-perspective: 1000;
-    perspective: 1000;
-    border: 0;
-    background: transparent;
+  /* @charset "UTF-8"; */
+.rounded-social-buttons {
+  text-align: center;
 }
-
-.flip-card:hover .flip-card-inner,
-.flip-card.hover .flip-card-inner {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
 }
-
-.flip-card,
-.flip-card-inner-front,
-.flip-card-inner-back {
-    width: 100%;
-    height: 20rem;
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
-
-.flip-card-inner {
-    transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    position: relative;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
 }
-
-.flip-card-inner-front,
-.flip-card-inner-back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+.rounded-social-buttons .social-button.facebook:before {
+  font-family: "FontAwesome";
+  content: "";
 }
-
-.flip-card-inner-front {
-    background: url(https://images.pexels.com/photos/179124/pexels-photo-179124.jpeg?w=940&h=650&auto=compress&cs=tinysrg) 0 0 no-repeat;
-    z-index: 2;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
 }
-
-.flip-card-inner-front span {
-    width: 100%;
-    text-align: center;
-    background: rgba(254, 254, 254, 0.8);
-    padding: 0.25rem 0;
-    font-size: 1.25rem;
-    font-weight: bold;
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
 }
-
-.flip-card-inner-back {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
-    background: #cacaca;
-    padding: 1rem;
+.rounded-social-buttons .social-button.twitter:before {
+  font-family: "FontAwesome";
+  content: "";
 }
-
-.flip-card-inner-back-title {
-    font-weight: bold;
+.rounded-social-buttons .social-button.twitter:hover, .rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
 }
-
-.flip-card-inner-back-text {
-    line-height: 1.3;
-} */
-
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+.rounded-social-buttons .social-button.linkedin:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+.rounded-social-buttons .social-button.youtube:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+.rounded-social-buttons .social-button.instagram:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
+.rounded-social-buttons .social-button.github {
+  background: #000000;
+}
+.rounded-social-buttons .social-button.github:before {
+  font-family: "FontAwesome";
+  content: "";
+}
+.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}  
