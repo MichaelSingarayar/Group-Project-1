@@ -1,18 +1,102 @@
 <!DOCTYPE html>
-<html>
+
+<html class="no-js" lang="en">
+
+
+
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TrailHeadZ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css"
+        integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" media="screen" href="./assests/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./assests/css/style.css" />
-    
-</head>
-<body>
- 
-    
 
+</head>
+
+
+<body>
+    <div class="hero-full-screen">
+
+        <div class="top-content-section">
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <li class="menu-text"><a href="index.html"><i class="fas fa-mountain"></i></a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="discussion.html">Discussion</a></li>
+                        <!-- <li><a href="basicSearch.html">Advanced Search</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-content-section">
+            <h1>TrailHeadZ</h1>
+            <a class="large button success searchBtn" href="basicSearch.html">Search</a>
+        </div>
+
+        <div class="bottom-content-section" data-magellan data-threshold="0">
+            <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" /></svg></a>
+        </div>
+
+    </div>
+
+    <div id="main-content-section" data-magellan-target="main-content-section">
+        <div class="container content">
+            <h2 class="about text-center">About</h2>
+            <p>Welcome to TrailHeadZ! This app is designed to bring you one step closer to your best hike yet.
+                Submit a basic search for trails near you or a preferred city. Or click Advanced Search to select info
+                like ratings or difficulty. Head over to our Discussion page to see what other hikers are saying.
+                Explore allows
+                you to dive into the map and move about at your leisure.
+            </p>
+            
+        </div>
+
+    </div>
+
+    <footer class="social-footer">
+            <div class="social-footer-left">
+              <div class="mtn">
+              <a href="#"><i id="footMtn" class="fas fa-mountain"></i></a>
+            </div>
+            </div>
+            <div class="social-footer-icons">
+                <div class="rounded-social-buttons">
+                  <a class="social-button facebook" href="#"></a>
+                  <a class="social-button twitter" href="#"></a>
+                  <a class="social-button linkedin" href="#"></a>
+                  <a class="social-button instagram" href="#"></a>
+                </div>
+            </div>
+          </footer> 
+
+
+    <!-- <footer class="social-footer">
+        <div class="social-footer-left">
+            <a href="index.html"><i class="fas fa-mountain"></i></a>
+        </div>
+            <div class="rounded-social-buttons">
+                <a class="social-button facebook" href="#"></a>
+                <a class="social-button twitter" href="#"></a>
+                <a class="social-button linkedin" href="#"></a>
+                <a class="social-button youtube" href="#"></a>
+                <a class="social-button instagram" href="#"></a>
+                <a class="social-button github" href="#"></a>
+
+            </div>
+    </footer> -->
 
 
 
@@ -20,6 +104,9 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
+        crossorigin="anonymous"></script>
     <script src="./assests/javascript/logic.js"></script>
 </body>
+
 </html>

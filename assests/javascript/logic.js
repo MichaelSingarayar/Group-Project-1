@@ -27,7 +27,10 @@ $(document).ready(function () {
   };
   firebase.initializeApp(config);
 
-  //Initailze Reddit API
+
+
+
+ //Initailze Reddit API
 
   var redditJSON = "https://old.reddit.com/r/coloradohikers.json";
 
@@ -74,7 +77,7 @@ $(document).ready(function () {
       tRow.append(postScore, postLink, numComments, commentSect);
 
       $(".reddit").append(tRow);
- 
+
 
     }
     
@@ -141,24 +144,69 @@ $(document).ready(function () {
 
     var starTd = $("<td>").text(response.trails[i].stars);
 
+
+    tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
+
+    $("tbody").append(tRow);
+
+
     tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
 
     $("tbody").append(tRow);
 
     
-
-    $(".second").html(response.trails[i].imgMedium);
-    $("text-center featured-image-block-title").text(response.trails[i].name);
     
+    var divBody = $("<div>");
+    var image = $("<img>");
+    image.attr("src",response.trails[i].imgMedium);
+    console.log("image"+ image);
+    
+    var name = $("<p>").text(response.trails[i].name);
+    name.addClass("align-center");
+    var b = $("<br><br>");
+  
+    divBody.append(image,name,b);
+    $("#first").append(divBody);
+
+    
+     
+
+  
+   
+
+    
+
+  };
 
 
   };
 });
 
 
+
 });
 
 
+ 
+
+
+
+});
+
+//$(".search-results").hide();
+
+$(".submit").on("click", function () {
+
+  $(".search-results").show();
+})
+
+
+});
+
+
+
+  
+  
 
   
   
