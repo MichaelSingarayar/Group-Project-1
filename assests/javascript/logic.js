@@ -108,13 +108,35 @@ $(document).ready(function () {
     $("tbody").append(tRow);
 
     
+    
+    var divBody = $("<div>");
+    var image = $("<img>");
+    image.attr("src",response.trails[i].imgMedium);
+    console.log("image"+ image);
+    
+    var name = $("<p>").text(response.trails[i].name);
+  
+    divBody.append(image,name);
+    $("#first").append(divBody);
 
-    $(".second").html(response.trails[i].imgMedium);
-    $("text-center featured-image-block-title").text(response.trails[i].name);
+    
+     
+
+  
+   
     
 
 
   };
+
+
+  
+
+
+ 
+
+
+
 });
 
 
