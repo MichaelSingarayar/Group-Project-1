@@ -1,5 +1,28 @@
 $(document).foundation();
 
+// more click- profile stats
+$('.card-profile-stats-more-link').click(function (e) {
+  e.preventDefault();
+  if ($(".card-profile-stats-more-content").is(':hidden')) {
+    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
+  } else {
+    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
+  }
+  $(this).next('.card-profile-stats-more-content').slideToggle();
+});
+
+// star rating
+
+$('[data-rating] .star').on('click', function () {
+  var selectedCssClass = 'selected';
+  var $this = $(this);
+  $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
+  $this
+    .addClass(selectedCssClass)
+    .parent().addClass('is-voted');
+});
+
+
 $(document).ready(function () {
 
 
@@ -50,9 +73,17 @@ $(document).ready(function () {
 
           //puts image and name into html
           var divBody = $("<div>");
+          //var link = $("<a href='../Group-Project-1/results.html'>");
           var image = $("<img>");
           image.attr("src", response.trails[j].imgMedium);
           console.log("image" + response.trails[j].imgMedium);
+
+
+
+
+
+
+
 
           var name = $("<p>").text(response.trails[j].name);
           name.addClass("align-center");
@@ -60,6 +91,31 @@ $(document).ready(function () {
 
           divBody.append(image, name, b);
           $("#first").prepend(divBody);
+
+
+          var images = document.getElementsByTagName("img");
+          for (var k = 0; k < images.length; k++) {
+            var imageI = images[k];
+            imageI.onclick = function (event) {
+              window.location.href = this.id + '../Group-Project-1/results.html';
+               var im = $("<img>");
+               im.attr("src",images[k]);
+
+               //need help looking within this new document
+
+               this.$("#img").append(im);
+
+
+
+
+
+
+
+
+            };
+          };
+
+
 
 
 
@@ -195,6 +251,9 @@ $(document).ready(function () {
 
 
   });
+
+
+
 
 
 

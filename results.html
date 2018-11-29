@@ -15,7 +15,7 @@
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous">
     <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
@@ -54,6 +54,8 @@
     </div>
 
     
+
+    
     
 
      <!-- details -->
@@ -61,8 +63,13 @@
   <div class="work-feature-block row">
     <div class="grid-x">
       <div class="columns medium-4">
-        <img class="work-feature-block-image" src="https://placehold.it/600x400"/>
+        <div id="img">
+
+
+        </div>
+        <!--- <img class="work-feature-block-image" src="https://placehold.it/600x400"/> -->
       </div>
+      
     
 
       <br>
@@ -186,35 +193,11 @@
     <!-- <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.min.js"></script> -->
-    <script>
-      $(document).foundation();
-
-      // more click- profile stats
-$('.card-profile-stats-more-link').click(function(e){
-  e.preventDefault();
-  if ( $(".card-profile-stats-more-content").is(':hidden') ) {
-    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
-  } else {
-    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
-  }
-  $(this).next('.card-profile-stats-more-content').slideToggle();
-});
-
-  // star rating
-
-  $('[data-rating] .star').on('click', function() {
-  var selectedCssClass = 'selected';
-  var $this = $(this);
-  $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
-  $this
-    .addClass(selectedCssClass)
-    .parent().addClass('is-voted');
-});
-
-
-
-
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
+        crossorigin="anonymous"></script>
+    <script src="./assests/javascript/logic.js"></script>
 
   </body>
 </html>
