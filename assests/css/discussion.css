@@ -1,133 +1,27 @@
 
+/* Font Style */
 body {
     font-family: 'Permanent Marker', cursive;
-}
-
-/* Main Screen Banner */
-
-.hero-full-screen {
-    height: 100vh;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    background: url("http://www.browniebites.net/wp-content/uploads/2013/07/smoky-mountain-hiking-trails-charlies-bunion-03.jpg") center center no-repeat;
-    background-size: cover;
-}
-
-.hero-full-screen .middle-content-section {
-    text-align: center;
-    color: beige;
-}
-
-h1 {
+  }
+  h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 6rem;
-}
-
-h2 {
+  }
+  h2 {
+    font-family: 'Permanent Marker', cursive;
     font-size: 4rem;
-    color: darkgreen;
-    padding: 5px;
-    margin: 10px;
-}
-
-.hero-full-screen .top-content-section {
-    width: 100%;
-}
-
-.hero-full-screen .bottom-content-section {
-    padding: 1rem;
-}
-
-.hero-full-screen .bottom-content-section svg {
-    height: 3.75rem;
-    width: 3.75rem;
-    fill: beige;
-}
-
-.hero-full-screen .top-bar {
-    background: transparent;
-}
-
-.hero-full-screen .top-bar .menu {
-    background: transparent;
-}
-
-.hero-full-screen .top-bar .menu-text {
-    color: beige;
-    font-size: 2rem;
-}
-
-.hero-full-screen .top-bar .menu li {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.hero-full-screen .top-bar .menu a {
-    color: beige;
-    font-weight: bold;
-}
-
-#main-content-section {
-    color: darkgreen;
-    background: url(/assests/halftone.png) center center no-repeat;
+  }
+  
+  /* Banner */
+  .large-article-header {
+    background: url("images/banner.3.jpg") no-repeat center transparent;
     background-size: cover;
-    height: 100%;
-}
-
-
-.input-group-rounded .input-group-field {
-    border-radius: 5000px 0 0 5000px;
-    padding-left: 1rem;
-}
-
-.input-group-rounded .input-group-button .button {
-    border-radius: 0 5000px 5000px 0;
-    font-size: 0.8rem;
-}
-
-
-.featured-image-block-grid-header {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .featured-image-block {
-    margin-bottom: 20px;
-  }
-  
-  .featured-image-block .featured-image-block-title {
-    font-weight: 600;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1em;
-    color: #404040;
-  }
-  
-  .featured-image-block a p {
-    color: darkgreen;
-  }
-  
-
-.large-article-header {
-    background: url("http://www.browniebites.net/wp-content/uploads/2013/07/smoky-mountain-hiking-trails-charlies-bunion-03.jpg") no-repeat center;
-    background-size: cover;
-    height: 20rem;
+    height: 15.25rem;
     position: relative;
+  }
+  
+  .top-content-section {
+    background: transparent;
   }
   
   @media screen and (max-width: 39.9375em) {
@@ -168,20 +62,30 @@ h2 {
   }
   
   .large-article-header-content .article-date {
-    color: beige;
+    color: #fefefe;
   }
   
   .large-article-header-content .article-title h1 {
     line-height: 3.125rem;
-    color: beige;
+    color: #fefefe;
     font-weight: 600;
   }
   
   @media screen and (max-width: 39.9375em) {
     .large-article-header-content .article-title h1 {
-      line-height: 1.875rem;
+      line-height: 7rem;
     }
   }
+  
+  @media screen and (max-width: 48.000em) {
+    .large-article-header-content .article-title {
+      line-height: 10rem;
+    }
+    h1 {
+      line-height: 7rem;
+    }
+  }
+  
   
   .large-article-header-content .article-details {
     display: -webkit-flex;
@@ -196,7 +100,7 @@ h2 {
   }
   
   .large-article-header-content .article-details a {
-    color: beige;
+    color: #fefefe;
   }
   
   .large-article-header-content .article-author {
@@ -216,56 +120,37 @@ h2 {
   .large-article-header-content .article-author a {
     margin-left: 1rem;
   }
-
-.top-bar {
+  
+  .top-content-section {
+    width: 100%;
+  }
+  
+  .large-article-header .top-bar {
     background: transparent;
-}
-
-.top-bar .menu {
+  }
+  
+  .large-article-header .top-bar .menu {
     background: transparent;
-}
-
-.top-bar .menu-text {
-    color: beige;
+  }
+  
+  .top-bar .menu-text {
+    color: white;
     font-size: 2rem;
-}
-
-.top-bar .menu li {
+  }
+  
+  .top-bar .menu li {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-}
-
-.top-bar .menu a {
+  }
+  
+  .top-bar .menu a {
     color: beige;
     font-weight: bold;
-}
-
-.search {
-    color: darkgreen;
-}
-
-.search-results {
-    color: darkgreen;
-}
-
-.exploreWidget {
-    padding: 5px 5px 5px 45px;
-    margin: 50px;
-    border-color: black;
-
-}
-
-.content {
-    padding: 30px;
-    margin: 15px;
-    background: url(/assests/halftone.png);
-    background-size: cover;
-    height: 100%;
-}
+  }
 
 /* Footer */
 .social-footer {

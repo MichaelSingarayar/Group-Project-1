@@ -13,15 +13,10 @@ h2 {
 
 /* Banner */
 .large-article-header {
-  background: url("banner.3.jpg") no-repeat center transparent;
+  background: url("images/banner.3.jpg") no-repeat center transparent;
   background-size: cover;
   height: 15.25rem;
   position: relative;
-}
-
-#navMtn {
-  background: green;
-  color: white;
 }
 
 .top-content-section {
@@ -77,9 +72,19 @@ h2 {
 
 @media screen and (max-width: 39.9375em) {
   .large-article-header-content .article-title h1 {
-    line-height: 1.875rem;
+    line-height: 7rem;
   }
 }
+
+@media screen and (max-width: 48.000em) {
+  .large-article-header-content .article-title {
+    line-height: 10rem;
+  }
+  h1 {
+    line-height: 7rem;
+  }
+}
+
 
 .large-article-header-content .article-details {
   display: -webkit-flex;
