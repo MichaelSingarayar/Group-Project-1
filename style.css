@@ -2,9 +2,13 @@
 body {
   font-family: 'Permanent Marker', cursive;
 }
-h1, h2 {
+h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 6rem;
+}
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4rem;
 }
 
 /* Banner */
@@ -302,22 +306,8 @@ h1, h2 {
   #footMtn {
     color: white;
   }
-  
-  .social-footer .social-footer-icons li:last-of-type {
-    margin-right: 0;
-  }
-  
-  .social-footer .social-footer-icons .fa {
-    font-size: 1.3rem;
-    color: #fefefe;
-  }
-  
-  .social-footer .social-footer-icons .fa:hover {
-    color: #4a4a4a;
-    transition: color 0.3s ease-in;
-  }
 
-  /* @charset "UTF-8"; */
+/* @charset "UTF-8"; */
 
 .rounded-social-buttons {
   text-align: center;
@@ -394,21 +384,6 @@ h1, h2 {
   border-color: #007bb5;
 }
 
-.rounded-social-buttons .social-button.youtube {
-  background: #bb0000;
-}
-
-.rounded-social-buttons .social-button.youtube:before {
-  font-family: "FontAwesome";
-  content: "";
-}
-
-.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
-  color: #bb0000;
-  background: #fefefe;
-  border-color: #bb0000;
-}
-
 .rounded-social-buttons .social-button.instagram {
   background: #125688;
 }
@@ -424,17 +399,4 @@ h1, h2 {
   border-color: #125688;
 }
 
-.rounded-social-buttons .social-button.github {
-  background: #000000;
-}
 
-.rounded-social-buttons .social-button.github:before {
-  font-family: "FontAwesome";
-  content: "";
-}
-
-.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
-  color: #000000;
-  background: #fefefe;
-  border-color: #000000;
-}  
