@@ -2,17 +2,129 @@ $(document).foundation();
 
 $(document).ready(function () {
 
-  var lat = 40.0274;
-  var lon = -105.2519;
-  var userInput = "";
 
 
-  $(".button success submit").on("click", function (event) {
+
+  //on click event  that grabs  user inputs and gets lat and lng from geocode api
+  $("#submit-btn").on("click", function (event) {
     event.preventDefault();
-    userInput = $(".input-field").val().trim();
+    var userInput = $(".input-field").val().trim();
     console.log(userInput);
-    userInput = $(".input-field").val("");
+    //Initalize GeoCode API
+    var geoJSON = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userInput + "&key=AIzaSyCW64s7vGbdV-D23-YVGWcTOIeNlMxHpzY"
+
+    $.ajax({
+      url: geoJSON,
+      method: "GET"
+    }).then(function (response) {
+
+
+
+      console.log(response);
+
+      console.log(response.results[0].geometry.location.lat);
+      console.log(response.results[0].geometry.location.lng);
+
+      //stores lat and lng
+      var lat = (response.results[0].geometry.location.lat);
+      var lng = (response.results[0].geometry.location.lng);
+
+
+
+      console.log("Latitiude " + lat);
+      console.log("Longitiude " + lng);
+
+      var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
+
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+
+        console.log(response);
+
+
+        for (var j = 0; j < response.trails.length; j++) {
+
+
+          //puts image and name into html
+          var divBody = $("<div>");
+          var image = $("<img>");
+          image.attr("src", response.trails[j].imgMedium);
+          console.log("image" + response.trails[j].imgMedium);
+
+          var name = $("<p>").text(response.trails[j].name);
+          name.addClass("align-center");
+          var b = $("<br><br>");
+
+          divBody.append(image, name, b);
+          $("#first").prepend(divBody);
+
+
+
+
+
+
+
+
+
+
+
+        };
+
+
+
+
+
+
+
+
+
+
+
+      });
+
+
+
+
+
+
+
+
+    });
+
+
   });
+
+
+
+
+
+
+
+
+
+
+  userInput = $(".input-field").val("");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,18 +196,6 @@ $(document).ready(function () {
 
   });
 
-  //Initalize GeoCode API
-  var geoJSON = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&key=AIzaSyCW64s7vGbdV-D23-YVGWcTOIeNlMxHpzY"
-
-  $.ajax({
-    url: geoJSON,
-    method: "GET"
-  }).then(function (response) {
-
-    console.log(response);
-
-
-  });
 
 
 
@@ -104,72 +204,75 @@ $(document).ready(function () {
 
 
 
-  // Initialize API
 
-  var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
+  // Initialize  Hiking API
 
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    console.log(response);
-    console.log(response.trails[0].conditionStatus);
+  //var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
 
 
-
-    for (var i = 0; i < response.trails.length; i++) {
-
-
-      console.log(response.trails[i].name);
-      console.log(response.trails[i].summary);
-      console.log(response.trails[i].location);
-      console.log(response.trails[i].length);
-      console.log(response.trails[i].difficulty);
-      console.log(response.trails[i].imgMedium);
-      console.log(response.trails[i].conditionStatus);
-      console.log(response.trails[i].stars);
-
-
-      var tRow = $("<tr>");
-
-
-      var nameTd = $("<td>").text(response.trails[i].name);
-      var sumTd = $("<td>").text(response.trails[i].summary);
-      var locationTd = $("<td>").text(response.trails[i].location);
-      var lengthTd = $("<td>").text(response.trails[i].length);
-      var diffTd = $("<td>").text(response.trails[i].difficulty);
-      var conTd = $("<td>").text(response.trails[i].conditionStatus);
-      var deetsTd = $("<td>").text(response.trails[i].conditionDetails);
-
-      var starTd = $("<td>").text(response.trails[i].stars);
-
-
-      tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
-
-      $("tbody").append(tRow);
-
-
-      tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
-
-      $("tbody").append(tRow);
+  //$.ajax({
+  //url: queryURL,
+  //method: "GET"
+  //}).then(function (response) {
+  //console.log(response);
+  //console.log(response.trails[0].conditionStatus);
 
 
 
-      var divBody = $("<div>");
-      var image = $("<img>");
-      image.attr("src", response.trails[i].imgMedium);
-      console.log("image" + image);
+  //for (var j = 0; j < response.trails.length; j++) {
 
-      var name = $("<p>").text(response.trails[i].name);
-      name.addClass("align-center");
-      var b = $("<br><br>");
+  //log of what we want to grab from api
+  //console.log(response.trails[j].name);
+  // console.log(response.trails[j].summary);
+  // console.log(response.trails[j].location);
+  // console.log(response.trails[j].length);
+  // console.log(response.trails[j].difficulty);
+  // console.log(response.trails[j].imgMedium);
+  // console.log(response.trails[j].conditionStatus);
+  // console.log(response.trails[j].stars);
+
+  //if we wanted to push results into a table
+  // var tRow = $("<tr>");
+
+
+  // var nameTd = $("<td>").text(response.trails[j].name);
+  //  var sumTd = $("<td>").text(response.trails[j].summary);
+  //  var locationTd = $("<td>").text(response.trails[j].location);
+  //  var lengthTd = $("<td>").text(response.trails[j].length);
+  //  var diffTd = $("<td>").text(response.trails[j].difficulty);
+  //  var conTd = $("<td>").text(response.trails[j].conditionStatus);
+  //  var deetsTd = $("<td>").text(response.trails[j].conditionDetails);
+
+  //  var starTd = $("<td>").text(response.trails[j].stars);
+
+
+  //  tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
+
+  //  $("tbody").append(tRow);
+
+
+  //  tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
+
+  //  $("tbody").append(tRow);
+
+
+  //puts image and name into html
+  //var divBody = $("<div>");
+  //var image = $("<img>");
+  //image.attr("src", response.trails[i].imgMedium);
+  //console.log("image" + image);
+
+  //var name = $("<p>").text(response.trails[i].name);
+  //name.addClass("align-center");
+  //var b = $("<br><br>");
+
 
       divBody.append(image, name, b);
       $("#first").append(divBody);
-    };
+    
 
-  });
+  
+
 
 
   //$(".search-results").hide();
@@ -177,7 +280,7 @@ $(document).ready(function () {
   $(".submit").on("click", function () {
 
     $(".search-results").show();
-  })
+  });
 
 
 });
