@@ -182,9 +182,9 @@ $(document).ready(function () {
 
 });
 
- // star rating
+// star rating
 
- $('[data-rating] .star').on('click', function() {
+$('[data-rating] .star').on('click', function () {
   var selectedCssClass = 'selected';
   var $this = $(this);
   $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
