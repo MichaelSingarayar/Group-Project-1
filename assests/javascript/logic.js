@@ -266,31 +266,12 @@ $(document).ready(function () {
   //name.addClass("align-center");
   //var b = $("<br><br>");
 
-  //divBody.append(image, name, b);
-  //$("#first").append(divBody);
 
+      divBody.append(image, name, b);
+      $("#first").append(divBody);
+    };
 
-
-
-
-
-
-
-
-  //};
-
-
-
-  //});
-
-
-
-
-
-
-
-
-
+  });
 
 
 
@@ -302,4 +283,15 @@ $(document).ready(function () {
   });
 
 
+});
+
+ // star rating
+
+ $('[data-rating] .star').on('click', function() {
+  var selectedCssClass = 'selected';
+  var $this = $(this);
+  $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
+  $this
+    .addClass(selectedCssClass)
+    .parent().addClass('is-voted');
 });
