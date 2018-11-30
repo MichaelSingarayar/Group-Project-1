@@ -167,30 +167,9 @@ $(document).ready(function () {
 
       divBody.append(image, name, b);
       $("#first").append(divBody);
-
-
-
-
-
-
-
-
-
     };
 
-
-
   });
-
-
-
-
-
-
-
-
-
-
 
 
   //$(".search-results").hide();
@@ -201,4 +180,15 @@ $(document).ready(function () {
   })
 
 
+});
+
+ // star rating
+
+ $('[data-rating] .star').on('click', function() {
+  var selectedCssClass = 'selected';
+  var $this = $(this);
+  $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
+  $this
+    .addClass(selectedCssClass)
+    .parent().addClass('is-voted');
 });
