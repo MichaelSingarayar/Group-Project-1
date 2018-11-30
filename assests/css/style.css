@@ -19,7 +19,7 @@ body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: url("http://www.browniebites.net/wp-content/uploads/2013/07/smoky-mountain-hiking-trails-charlies-bunion-03.jpg") center center no-repeat;
+    background: url(images/banner.3.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -83,8 +83,6 @@ h2 {
 
 #main-content-section {
     color: darkgreen;
-    background: url(/assests/halftone.png) center center no-repeat;
-    background-size: cover;
     height: 100%;
 }
 
@@ -252,7 +250,7 @@ h2 {
     color: darkgreen;
 }
 
-.exploreWidget {
+/* .exploreWidget {
     padding: 5px 5px 5px 45px;
     margin: 50px;
     border-color: black;
@@ -262,10 +260,8 @@ h2 {
 .content {
     padding: 30px;
     margin: 15px;
-    background: url(/assests/halftone.png);
-    background-size: cover;
     height: 100%;
-}
+} */
 
 /* Footer */
 .social-footer {

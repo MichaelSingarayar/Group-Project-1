@@ -5,10 +5,12 @@ body {
 h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 6rem;
+  color:beige;
 }
 h2 {
   font-family: 'Permanent Marker', cursive;
   font-size: 4rem;
+  color: darkgreen;
 }
 
 /* Banner */
@@ -61,12 +63,12 @@ h2 {
 }
 
 .large-article-header-content .article-date {
-  color: #fefefe;
+  color: beige;
 }
 
 .large-article-header-content .article-title h1 {
   line-height: 3.125rem;
-  color: #fefefe;
+  color: beige;
   font-weight: 600;
 }
 
@@ -99,7 +101,7 @@ h2 {
 }
 
 .large-article-header-content .article-details a {
-  color: #fefefe;
+  color: beige;
 }
 
 .large-article-header-content .article-author {
@@ -133,7 +135,7 @@ h2 {
 }
 
 .top-bar .menu-text {
-  color: white;
+  color: beige;
   font-size: 2rem;
 }
 
@@ -149,6 +151,21 @@ h2 {
 .top-bar .menu a {
   color: beige;
   font-weight: bold;
+}
+
+/*Explore Page */
+
+.exploreWidget {
+  padding: 5px 5px 5px 45px;
+  margin: 50px;
+  border-color: black;
+
+}
+
+.content {
+  padding: 30px;
+  margin: 15px;
+  height: 100%;
 }
 
 
