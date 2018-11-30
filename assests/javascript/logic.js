@@ -171,6 +171,9 @@ $(document).ready(function () {
           var diff = response.trails[j].difficulty;
           var con = response.trails[j].conditionStatus;
           var deets = response.trails[j].conditionDetails;
+          var url = response.trails[j].url;
+          console.log(url);
+
 
 
           var userIn = {
@@ -199,11 +202,20 @@ $(document).ready(function () {
           image.attr("src", response.trails[j].imgMedium);
           console.log("image" + response.trails[j].imgMedium);
 
-          var name = $("<p>").text(response.trails[j].name);
-          name.addClass("align-center");
+          //var name = $("<p>").text(response.trails[j].name);
+          var name = (response.trails[j].name);
+          var nameUrl = '<p><a href="' + url + '">"' + name + '"</a><p>';
+          // name.addClass("align-center");
+          var summary = $("<p>").text("Trail Summary: " + response.trails[j].summary);
+          var loc = $("<p>").text("Location: " + response.trails[j].location);
+          var leng = $("<p>").text("Length of Trail: " + response.trails[j].length);
+          var dif = $("<p>").text("Trail Difficulty: " + response.trails[j].difficulty);
+          var co = $("<p>").text("Trail Status: " + response.trails[j].conditionStatus);
+          var deet = $("<p>").text("Trail Condition: " + response.trails[j].conditionDetails);
+
           var b = $("<br><br>");
 
-          divBody.append(image, name, b);
+          divBody.append(image, nameUrl, summary, loc, leng, dif, co, deet, b);
           $("#first").prepend(divBody);
 
 
