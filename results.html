@@ -12,12 +12,20 @@
     crossorigin="anonymous"></script>
     <!-- Font Link -->
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+    <!-- Foundation -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css"
+        integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA=="
+        crossorigin="anonymous">
     <!-- Compressed CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/css/foundation.min.css" integrity="sha256-1mcRjtAxlSjp6XJBgrBeeCORfBp/ppyX4tsvpQVCcpA= sha384-b5S5X654rX3Wo6z5/hnQ4GBmKuIJKMPwrJXn52ypjztlnDK2w9+9hSMBz/asy9Gw sha512-M1VveR2JGzpgWHb0elGqPTltHK3xbvu3Brgjfg4cg5ZNtyyApxw/45yHYsZ/rCVbfoO5MSZxB241wWq642jLtA==" crossorigin="anonymous">
     <!-- Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Icon Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <!-- Mtn Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assests/css/masterstyle.css">
   </head>
 
 
@@ -31,15 +39,14 @@
               <div class="top-bar">
                   <div class="top-bar-left">
                       <ul class="menu">
-                          <li class="menu-text"><i id="navMtn" class="fas fa-mountain"></i></li>
-                          <li><a href=".about">About</a></li>
-                          <li><a href=".discuss">Discussion</a></li>
-                          <li><a href="#">Advanced Search</a></li>
+                          <li class="menu-text"><a href="index.html"><i id="navMtn" class="fas fa-mountain"></a></i></li>
+                          <li><a href="explore.html">Explore</a></li>
+                          <li><a href="discussion.html">Discussion</a></li>
+                          <!-- <li><a href="#">Advanced Search</a></li> -->
                       </ul>
                   </div>
               </div>
           </div>
-        <!-- <div class="large-article-header"> -->
           <div class="large-article-header-content">
             <div class="center-container">
               <div class="article-title">
@@ -59,14 +66,14 @@
      <!-- details -->
 
   <div class="work-feature-block row">
-    <div class="grid-x">
-      <div class="columns medium-4">
+      <div class="row">
+      <div class="medium-12 medium-centered columns">
         <img class="work-feature-block-image" src="https://placehold.it/600x400"/>
       </div>
     
-
-      <br>
        <!-- star rating -->
+       <div class="row">
+         <div class="medium-4 medium-centered columns">
        <div class="card rating">
           <div class="card-section">
             <p class="ratings-card-header">Trail Rating</p>
@@ -103,7 +110,11 @@
         </div>
     </div>
   </div>
-    <br>
+</div>
+</div>
+
+
+<!-- Details -->
     <div class="row">
       <div class="columns medium-8">
         <h2 class="work-feature-block-header">Trail Description</h2>
@@ -113,7 +124,7 @@
           <li>Trail Length</li>
           <li>Difficulty</li>
           <li>conditionDetails</li>
-          <li>Item 4</li>
+          <li>REI Link?</li>
         </ul>
       </div>
     </div>
@@ -122,7 +133,7 @@
 
     <div class="featured-testimonials-section">
         <div class="row columns">
-          <h1>Featured In</h1>
+          <h2>Featured In</h2>
         </div>
         <div class="featured-testimonials row">
           <div class="small-12 medium-6 columns">
@@ -163,7 +174,7 @@
   <footer class="social-footer">
     <div class="social-footer-left">
       <div class="mtn">
-      <a href="#"><i id="footMtn" class="fas fa-mountain"></i></a>
+      <a href="index.html"><i id="footMtn" class="fas fa-mountain"></i></a>
     </div>
     </div>
     <div class="social-footer-icons">
@@ -176,45 +187,7 @@
     </div>
   </footer>
   
-        
-        
-      
-      
-
-    
-
-    <!-- <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.min.js"></script> -->
-    <script>
-      $(document).foundation();
-
-      // more click- profile stats
-$('.card-profile-stats-more-link').click(function(e){
-  e.preventDefault();
-  if ( $(".card-profile-stats-more-content").is(':hidden') ) {
-    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-down').addClass('fa-angle-up');
-  } else {
-    $('.card-profile-stats-more-link').find('i').removeClass('fa-angle-up').addClass('fa-angle-down');
-  }
-  $(this).next('.card-profile-stats-more-content').slideToggle();
-});
-
-  // star rating
-
-  $('[data-rating] .star').on('click', function() {
-  var selectedCssClass = 'selected';
-  var $this = $(this);
-  $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
-  $this
-    .addClass(selectedCssClass)
-    .parent().addClass('is-voted');
-});
-
-
-
-
-    </script>
+    <script src="assests/javascript/results.js"></script>
 
   </body>
 </html>
