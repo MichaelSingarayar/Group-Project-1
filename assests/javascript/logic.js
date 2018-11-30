@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 
 
-  //Initailze Reddit API
+  //Initailze Reddit.JSON
 
   var redditJSON = "https://old.reddit.com/r/coloradohikers.json";
 
@@ -74,8 +74,10 @@ $(document).ready(function () {
 
 
       var tRow = $("<tr>");
+      //var tHead = $("<th class='>");
 
       // Merging the URL for the post with the title of the post.
+
       var postTitle = (response.data.children[i].data.title);
       var postURL = (response.data.children[i].data.url);
 
@@ -85,17 +87,19 @@ $(document).ready(function () {
 
       var commentsURL = "https://www.reddit.com" + (response.data.children[i].data.permalink);
 
-      var numComments = $("<td>").text(response.data.children[i].data.num_comments);
-      var commentSect = '<td><a href="' + commentsURL + '">Comments</a></td>';
+      var numComments = (response.data.children[i].data.num_comments);
+      var commentSect = '<td><a href="' + commentsURL + '">"' + numComments + '" Comments</a></td>';
 
       // var authorName = $("<td>").text(response.data.children[i].data.author);
       // var subredditName = $("<td>").text(response.data.children[i].data.subreddit);
 
       var postScore = $("<td>").text(response.data.children[i].data.score);
 
-      tRow.append(postScore, postLink, numComments, commentSect);
+      //tHead.append("Score", "Title", "Comments");
+      tRow.append(postScore, postLink, commentSect);
 
-      $(".reddit").append(tRow);
+      //$("#reddit-json").append(tHead);
+      $("#table-body").append(tRow);
 
 
     }
@@ -116,6 +120,19 @@ $(document).ready(function () {
 
 
 
+  // // Initialize API
+
+  // var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
+
+
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET"
+  // }).then(function (response) {
+  //   console.log(response);
+  //   console.log(response.trails[0].conditionStatus);
+
+
   //on click event  that grabs  user inputs and gets lat and lng from geocode api
   $("#submit-btn").on("click", function (event) {
     event.preventDefault();
@@ -129,6 +146,19 @@ $(document).ready(function () {
     //Initalize GeoCode API
     var geoJSON = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userInput + "&key=AIzaSyCW64s7vGbdV-D23-YVGWcTOIeNlMxHpzY"
 
+
+  //   for (var i = 0; i < response.trails.length; i++) {
+
+
+  //     console.log(response.trails[i].name);
+  //     console.log(response.trails[i].summary);
+  //     console.log(response.trails[i].location);
+  //     console.log(response.trails[i].length);
+  //     console.log(response.trails[i].difficulty);
+  //     console.log(response.trails[i].imgMedium);
+  //     console.log(response.trails[i].conditionStatus);
+  //     console.log(response.trails[i].stars);
+
     $.ajax({
       url: geoJSON,
       method: "GET"
@@ -136,19 +166,39 @@ $(document).ready(function () {
 
 
 
+
       console.log(response);
+
+
 
       console.log(response.results[0].geometry.location.lat);
       console.log(response.results[0].geometry.location.lng);
+
 
       //stores lat and lng
       var lat = (response.results[0].geometry.location.lat);
       var lng = (response.results[0].geometry.location.lng);
 
 
+  //     var nameTd = $("<td>").text(response.trails[i].name);
+  //     var sumTd = $("<td>").text(response.trails[i].summary);
+  //     var locationTd = $("<td>").text(response.trails[i].location);
+  //     var lengthTd = $("<td>").text(response.trails[i].length);
+  //     var diffTd = $("<td>").text(response.trails[i].difficulty);
+  //     var conTd = $("<td>").text(response.trails[i].conditionStatus);
+  //     var deetsTd = $("<td>").text(response.trails[i].conditionDetails);
+
+  //     var starTd = $("<td>").text(response.trails[i].stars);
+
+
+
 
       console.log("Latitiude " + lat);
       console.log("Longitiude " + lng);
+
+  //     tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
+
+  //     $("tbody").append(tRow);
 
       // Initialize Hiking Api
       var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
@@ -259,6 +309,25 @@ $(document).ready(function () {
 
         };
 
+  //     tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
+
+  //     $("tbody").append(tRow);
+
+
+
+  //     var divBody = $("<div>");
+  //     var image = $("<img>");
+  //     image.attr("src", response.trails[i].imgMedium);
+  //     console.log("image" + image);
+
+  //     var name = $("<p>").text(response.trails[i].name);
+  //     name.addClass("align-center");
+  //     var b = $("<br><br>");
+
+  //     divBody.append(image, name, b);
+  //     $("#first").append(divBody);
+
+
 
 
 
@@ -276,6 +345,13 @@ $(document).ready(function () {
 
 
 
+    // };
+
+
+
+  // });
+
+
 
 
     });
@@ -291,7 +367,8 @@ $(document).ready(function () {
 
 
 
-  // clears user input feild 
+
+  // clears user input field 
   userInput = $(".input-field").val("");
 
 
