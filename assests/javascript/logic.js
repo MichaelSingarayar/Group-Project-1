@@ -269,9 +269,9 @@ $(document).ready(function () {
 
       divBody.append(image, name, b);
       $("#first").append(divBody);
-    };
+    
 
-  });
+  
 
 
 
