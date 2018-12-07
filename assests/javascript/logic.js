@@ -246,15 +246,18 @@ $(document).ready(function () {
 
 
           //puts image and name into html
-          var divBody = $("<div>");
+          // var divBody = $("<div>");
+          // divBody.addClass("grid-container");
+          
 
           var image = $("<img>");
           image.attr("src", response.trails[j].imgMedium);
           console.log("image" + response.trails[j].imgMedium);
+          image.addClass("card-image");
 
           //var name = $("<p>").text(response.trails[j].name);
           var name = (response.trails[j].name);
-          var nameUrl = '<p><a href="' + url + '">"' + name + '"</a><p>';
+          var nameUrl = '<h4><a href="' + url + '">"' + name + '"</a><h4>';
           // name.addClass("align-center");
           var summary = $("<p>").text("Trail Summary: " + response.trails[j].summary);
           var loc = $("<p>").text("Location: " + response.trails[j].location);
@@ -265,8 +268,22 @@ $(document).ready(function () {
 
           var b = $("<br><br>");
 
-          divBody.append(image, nameUrl, summary, loc, leng, dif, co, deet, b);
-          $("#first").prepend(divBody);
+          var newGrid = $("<div>");
+          newGrid.addClass("grid-x grid-padding-x medium-up-3");
+          var newCell = $("<div>");
+          newCell.addClass("cell");
+          var newCard = $("<div>");
+          newCard.addClass("card searchCard");
+          newCard.append(image, nameUrl, summary, loc, leng, dif, co, deet, b);
+          // divBody.append(newGrid);
+          newGrid.append(newCell);
+          newCell.append(newCard);
+
+          // divBody.append(image, nameUrl, summary, loc, leng, dif, co, deet, b);
+          
+          
+          
+          $("#first").prepend(newGrid);
 
 
 
