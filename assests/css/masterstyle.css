@@ -228,7 +228,7 @@ h2 {
     font-size: 2rem;
 }
 
-.top-bar .menu li {
+.top-bar .menu li h1 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -271,7 +271,7 @@ h2 {
 .large-article-header {
     background: url("images/banner.3.jpg") no-repeat center transparent;
     background-size: cover;
-    height: 15.25rem;
+    /* height: 15.25rem; */
     position: relative;
 }
 
@@ -321,7 +321,7 @@ h2 {
 }
 
 .large-article-header-content .article-title h1 {
-    line-height: 3.125rem;
+    line-height: 4.75rem;
     color: beige;
     font-weight: 600;
 }
@@ -339,6 +339,7 @@ h2 {
 
     h1 {
         line-height: 7rem;
+        font-size: 3rem;
     }
 }
 
@@ -567,6 +568,7 @@ h2 {
 
 /* Footer */
 
+
 .social-footer {
     padding: 1rem;
     background: green;
@@ -632,4 +634,23 @@ h2 {
     color: #000000;
     background: #fefefe;
     border-color: #000000;
+}
+
+/* Discussion Table */
+
+.contents {
+    padding: 30px;
+    margin: 15px;
+    height: 100%;
+}
+
+@media screen and (max-width: 39.9375em) {
+   h2 {
+        font-size: 3.5rem;
+    }
+    .contents {
+        padding: 5px;
+        margin: 5px;
+        height: 100%;
+    }
 }
