@@ -120,17 +120,6 @@ $(document).ready(function () {
 
 
 
-  // // Initialize API
-
-  // var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
-
-
-  // $.ajax({
-  //   url: queryURL,
-  //   method: "GET"
-  // }).then(function (response) {
-  //   console.log(response);
-  //   console.log(response.trails[0].conditionStatus);
 
 
   //on click event  that grabs  user inputs and gets lat and lng from geocode api
@@ -147,17 +136,6 @@ $(document).ready(function () {
     var geoJSON = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userInput + "&key=AIzaSyCW64s7vGbdV-D23-YVGWcTOIeNlMxHpzY"
 
 
-    //   for (var i = 0; i < response.trails.length; i++) {
-
-
-    //     console.log(response.trails[i].name);
-    //     console.log(response.trails[i].summary);
-    //     console.log(response.trails[i].location);
-    //     console.log(response.trails[i].length);
-    //     console.log(response.trails[i].difficulty);
-    //     console.log(response.trails[i].imgMedium);
-    //     console.log(response.trails[i].conditionStatus);
-    //     console.log(response.trails[i].stars);
 
     $.ajax({
       url: geoJSON,
@@ -180,15 +158,6 @@ $(document).ready(function () {
       var lng = (response.results[0].geometry.location.lng);
 
 
-      //     var nameTd = $("<td>").text(response.trails[i].name);
-      //     var sumTd = $("<td>").text(response.trails[i].summary);
-      //     var locationTd = $("<td>").text(response.trails[i].location);
-      //     var lengthTd = $("<td>").text(response.trails[i].length);
-      //     var diffTd = $("<td>").text(response.trails[i].difficulty);
-      //     var conTd = $("<td>").text(response.trails[i].conditionStatus);
-      //     var deetsTd = $("<td>").text(response.trails[i].conditionDetails);
-
-      //     var starTd = $("<td>").text(response.trails[i].stars);
 
 
 
@@ -196,9 +165,7 @@ $(document).ready(function () {
       console.log("Latitiude " + lat);
       console.log("Longitiude " + lng);
 
-      //     tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
-
-      //     $("tbody").append(tRow);
+     
 
       // Initialize Hiking Api
       var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
@@ -245,41 +212,33 @@ $(document).ready(function () {
 
 
 
-          //puts image and name into html
-          // var divBody = $("<div>");
-          // divBody.addClass("grid-container");
-
-
+          //Puts image and name and other parameters into html
           var image = $("<img>");
           image.attr("src", response.trails[j].imgMedium);
           console.log("image" + response.trails[j].imgMedium);
           image.addClass("card-image");
-
-          //var name = $("<p>").text(response.trails[j].name);
           var name = (response.trails[j].name);
+          // Makes the trail name a link to REI hiking trail webiste of desired trail
           var nameUrl = '<h4><a href="' + url + '">"' + name + '"</a><h4>';
-          // name.addClass("align-center");
           var summary = $("<p>").text("Trail Summary: " + response.trails[j].summary);
           var loc = $("<p>").text("Location: " + response.trails[j].location);
-          var leng = $("<p>").text("Length of Trail: " + response.trails[j].length);
+          var leng = $("<p>").text("Length of Trail: " + response.trails[j].length + " miles");
           var dif = $("<p>").text("Trail Difficulty: " + response.trails[j].difficulty);
           var co = $("<p>").text("Trail Status: " + response.trails[j].conditionStatus);
           var deet = $("<p>").text("Trail Condition: " + response.trails[j].conditionDetails);
 
           var b = $("<br><br>");
 
-          //var newGrid = $("<div>");
-          //newGrid.addClass("medium-up-3");
+          // Creates card div
           var newCell = $("<div>");
           newCell.addClass("cell");
           var newCard = $("<div>");
           newCard.addClass("card searchCard");
-          newCard.append(image, nameUrl, summary, loc, leng, dif, co, deet, b);
-          // divBody.append(newGrid);
-          //newGrid.append(newCell);
+          newCard.append(image, nameUrl,loc, summary, leng, dif, co, deet, b);
+
           newCell.append(newCard);
 
-          // divBody.append(image, nameUrl, summary, loc, leng, dif, co, deet, b);
+
 
 
 
@@ -326,28 +285,6 @@ $(document).ready(function () {
 
         };
 
-        //     tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
-
-        //     $("tbody").append(tRow);
-
-
-
-        //     var divBody = $("<div>");
-        //     var image = $("<img>");
-        //     image.attr("src", response.trails[i].imgMedium);
-        //     console.log("image" + image);
-
-        //     var name = $("<p>").text(response.trails[i].name);
-        //     name.addClass("align-center");
-        //     var b = $("<br><br>");
-
-        //     divBody.append(image, name, b);
-        //     $("#first").append(divBody);
-
-
-
-
-
 
 
 
@@ -362,11 +299,7 @@ $(document).ready(function () {
 
 
 
-      // };
 
-
-
-      // });
 
 
 
@@ -391,126 +324,10 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // Initialize  Hiking API
-
-  //var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=10&maxResults=10&key=200388220-d5e3b13778e51ac99d93ea01e7508197";
-
-
-  //$.ajax({
-  //url: queryURL,
-  //method: "GET"
-  //}).then(function (response) {
-  //console.log(response);
-  //console.log(response.trails[0].conditionStatus);
-
-
-
-  //for (var j = 0; j < response.trails.length; j++) {
-
-  //log of what we want to grab from api
-  //console.log(response.trails[j].name);
-  // console.log(response.trails[j].summary);
-  // console.log(response.trails[j].location);
-  // console.log(response.trails[j].length);
-  // console.log(response.trails[j].difficulty);
-  // console.log(response.trails[j].imgMedium);
-  // console.log(response.trails[j].conditionStatus);
-  // console.log(response.trails[j].stars);
-
-  //if we wanted to push results into a table
-  // var tRow = $("<tr>");
-
-
-  // var nameTd = $("<td>").text(response.trails[j].name);
-  //  var sumTd = $("<td>").text(response.trails[j].summary);
-  //  var locationTd = $("<td>").text(response.trails[j].location);
-  //  var lengthTd = $("<td>").text(response.trails[j].length);
-  //  var diffTd = $("<td>").text(response.trails[j].difficulty);
-  //  var conTd = $("<td>").text(response.trails[j].conditionStatus);
-  //  var deetsTd = $("<td>").text(response.trails[j].conditionDetails);
-
-  //  var starTd = $("<td>").text(response.trails[j].stars);
-
-
-  //  tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
-
-  //  $("tbody").append(tRow);
-
-
-  //  tRow.append(nameTd, sumTd, locationTd, lengthTd, diffTd, conTd, deetsTd, starTd);
-
-  //  $("tbody").append(tRow);
-
-
-  //puts image and name into html
-  //var divBody = $("<div>");
-  //var image = $("<img>");
-  //image.attr("src", response.trails[i].imgMedium);
-  //console.log("image" + image);
-
-  //var name = $("<p>").text(response.trails[i].name);
-  //name.addClass("align-center");
-  //var b = $("<br><br>");
-
-
- // divBody.append(image, name, b);
-  //$("#first").append(divBody);
-
-
-
-
-
-
-  //$(".search-results").hide();
-
   $(".submit").on("click", function () {
 
     $(".search-results").show();
   });
 
 
-});
-
-// star rating
-
-$('[data-rating] .star').on('click', function () {
-  var selectedCssClass = 'selected';
-  var $this = $(this);
-  $this.siblings('.' + selectedCssClass).removeClass(selectedCssClass);
-  $this
-    .addClass(selectedCssClass)
-    .parent().addClass('is-voted');
 });
