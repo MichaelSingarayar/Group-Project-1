@@ -62,44 +62,44 @@ $(document).ready(function () {
 
     for (var i = 0; i < response.data.children.length; i++) {
 
-      console.log(response.data.children[i].data.title);
-      // console.log(response.data.children[i].data.selftext);
-      console.log(response.data.children[i].data.author);
-      console.log(response.data.children[i].data.num_comments);
-      console.log(response.data.children[i].data.url);
-      console.log(response.data.children[i].data.subreddit);
-      console.log(response.data.children[i].data.score);
-
-
-
-
+      // Create a row in the table to inject Reddit JSON info
+      
       var tRow = $("<tr>");
-      //var tHead = $("<th class='>");
 
-      // Merging the URL for the post with the title of the post.
+      // Inject the URL for the reddit post into the title of the post.
 
       var postTitle = (response.data.children[i].data.title);
       var postURL = (response.data.children[i].data.url);
 
-      var postLink = '<td><a href="' + postURL + '">"' + postTitle + '"</a></td>';
+      var postLink = '<td><a href="' + postURL + '" target="_blank">' + postTitle + '</a></td>';
+      
 
-      // Merging the URL for the comments to a dedicated "comments" link
+      // Injecting the URL for the comments to a dedicated "comments" button
 
       var commentsURL = "https://www.reddit.com" + (response.data.children[i].data.permalink);
 
       var numComments = (response.data.children[i].data.num_comments);
-      var commentSect = '<td><a href="' + commentsURL + '">"' + numComments + '" Comments</a></td>';
+      var commentSect = '<td><a class="success button" href="' + commentsURL + '" target="_blank">' + numComments + ' Comments</a></td>';
 
-      // var authorName = $("<td>").text(response.data.children[i].data.author);
-      // var subredditName = $("<td>").text(response.data.children[i].data.subreddit);
+      // Display the Reddit score of the post from
 
       var postScore = $("<td>").text(response.data.children[i].data.score);
 
-      //tHead.append("Score", "Title", "Comments");
+      
       tRow.append(postScore, postLink, commentSect);
 
-      //$("#reddit-json").append(tHead);
+      // append tRow into the HTML table
+
       $("#table-body").append(tRow);
+
+      // Note that when a user is logged into Reddit with their own account
+      // the discussion page will display the maximum number of posts the user has allowed to appear
+      // on their own front page.
+
+      // The default number of posts per page on Reddit is 25
+      
+      // If the user's account allows 100 reddit posts to appear per page on Reddit, then 100 pages will
+      // appear on discussion.html
 
 
     }
