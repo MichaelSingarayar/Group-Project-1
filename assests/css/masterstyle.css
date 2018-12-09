@@ -3,6 +3,26 @@ body {
     font-family: 'Permanent Marker', cursive;
 }
 
+/* This is my css for trying to get cards to display horizontal */
+#first {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.cell {
+    justify-content: space-around;
+    width: 33%;
+
+}
+/* -------x */
+
+.search-results {
+    width: 100vw;
+}
+
 /* Main Screen Banner */
 
 .hero-full-screen {
@@ -241,6 +261,7 @@ h2 {
     color: beige;
     font-weight: bold;
 }
+
 /* Search page */
 .search {
     color: darkgreen;
@@ -649,9 +670,10 @@ h2 {
 }
 
 @media screen and (max-width: 39.9375em) {
-   h2 {
+    h2 {
         font-size: 3.5rem;
     }
+
     .contents {
         padding: 5px;
         margin: 5px;
