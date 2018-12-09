@@ -35,7 +35,7 @@
                                 <li class="menu-text"><a href="index.html"><i id="navMtn" class="fas fa-mountain"></a></i></li>
                                 <li><a href="explore.html">Explore</a></li>
                                 <li><a href="discussion.html">Discussion</a></li>
-                                <!-- <li><a href="#">Advanced Search</a></li> -->
+                                <li><a href="basicSearch.html">Search</a></li>
                             </ul>
                         </div>
                     </div>
@@ -50,8 +50,6 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
 
     <div class="container align-center">
         <h2 class="search text-center">Search</h2>
@@ -59,8 +57,8 @@
             <div class="grid-container">
                 <div class="grid-x grid-padding-x align-center">
                     <div class="medium-4 cell">
-                        <label>City, State, Or Zip Code
-                            <input class="input-field" type="text" placeholder="City, State, Or Zip Code">
+                        <label>City, State, Zip Code, Or Address
+                            <input class="input-field" type="text" placeholder="City, State, Zip Code, Or Address">
                         </label>
 
                     </div>
@@ -69,42 +67,46 @@
                 <a id="submit-btn" class="button success submit text-center" href="#">Submit</a>
             </div>
         </form>
+    </div>
 
-        <div class="featured-image-block-grid search-results">
-            <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
-                <h2>Results</h2>
-                <p>Top Trails for your area.</p>
+    <div class="featured-image-block-grid search-results">
+        <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+            <h2>Results</h2>
+            <p>Top Trails for your area.</p>
+        </div>
+
+
+        <br><br>
+
+        <!-- Cards being add to the DOM -->
+        <div id="first" class="grid-container">
+
+        </div>
+
+
+    </div>
+
+    <br><br>
+
+    <!-- Footer -->
+    <footer class="social-footer">
+        <div class="social-footer-left">
+            <div class="mtn">
+                <a href="index.html"><i id="footMtn" class="fas fa-mountain"></i></a>
             </div>
-
-            <br><br>
-
-
-            <div id="first" class="featured-image-block column align-center">
-
-
+        </div>
+        <div class="social-footer-icons">
+            <div class="rounded-social-buttons">
+                <a class="social-button github" href="https://github.com/MichaelSingarayar/Group-Project-1" target="_blank"></a>
             </div>
-            
+        </div>
+    </footer>
 
-            <!-- Footer -->
-            <footer class="social-footer">
-                <div class="social-footer-left">
-                    <div class="mtn">
-                        <a href="index.html"><i id="footMtn" class="fas fa-mountain"></i></a>
-                    </div>
-                </div>
-                <div class="social-footer-icons">
-                    <div class="rounded-social-buttons">
-                        <a class="social-button github" href="https://github.com/MichaelSingarayar/Group-Project-1"
-                            target="_blank"></a>
-                    </div>
-                </div>
-            </footer>
-
-            <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
-                crossorigin="anonymous"></script>
-            <script src="./assests/javascript/logic.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.1/dist/js/foundation.min.js" integrity="sha256-WUKHnLrIrx8dew//IpSEmPN/NT3DGAEmIePQYIEJLLs= sha384-53StQWuVbn6figscdDC3xV00aYCPEz3srBdV/QGSXw3f19og3Tq2wTRe0vJqRTEO sha512-X9O+2f1ty1rzBJOC8AXBnuNUdyJg0m8xMKmbt9I3Vu/UOWmSg5zG+dtnje4wAZrKtkopz/PEDClHZ1LXx5IeOw=="
+        crossorigin="anonymous"></script>
+    <script src="./assests/javascript/logic.js"></script>
 </body>
 
 </html>

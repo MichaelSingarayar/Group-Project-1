@@ -3,6 +3,26 @@ body {
     font-family: 'Permanent Marker', cursive;
 }
 
+/* This is my css for trying to get cards to display horizontal */
+#first {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.cell {
+    justify-content: space-around;
+    width: 33%;
+
+}
+/* -------x */
+
+.search-results {
+    width: 100vw;
+}
+
 /* Main Screen Banner */
 
 .hero-full-screen {
@@ -228,7 +248,7 @@ h2 {
     font-size: 2rem;
 }
 
-.top-bar .menu li {
+.top-bar .menu li h1 {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -242,12 +262,17 @@ h2 {
     font-weight: bold;
 }
 
+/* Search page */
 .search {
     color: darkgreen;
 }
 
 .search-results {
     color: darkgreen;
+}
+
+.searchCard {
+    float: left;
 }
 
 /* Font Style */
@@ -271,7 +296,7 @@ h2 {
 .large-article-header {
     background: url("images/banner.3.jpg") no-repeat center transparent;
     background-size: cover;
-    height: 15.25rem;
+    /* height: 15.25rem; */
     position: relative;
 }
 
@@ -321,7 +346,7 @@ h2 {
 }
 
 .large-article-header-content .article-title h1 {
-    line-height: 3.125rem;
+    line-height: 4.75rem;
     color: beige;
     font-weight: 600;
 }
@@ -339,6 +364,7 @@ h2 {
 
     h1 {
         line-height: 7rem;
+        font-size: 3rem;
     }
 }
 
@@ -567,6 +593,7 @@ h2 {
 
 /* Footer */
 
+
 .social-footer {
     padding: 1rem;
     background: green;
@@ -632,4 +659,24 @@ h2 {
     color: #000000;
     background: #fefefe;
     border-color: #000000;
+}
+
+/* Discussion Table */
+
+.contents {
+    padding: 30px;
+    margin: 15px;
+    height: 100%;
+}
+
+@media screen and (max-width: 39.9375em) {
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .contents {
+        padding: 5px;
+        margin: 5px;
+        height: 100%;
+    }
 }
