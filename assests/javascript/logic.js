@@ -133,7 +133,7 @@ $(document).ready(function () {
 
     console.log(userInput);
     //Initalize GeoCode API
-    var geoJSON = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userInput + "&key=AIzaSyCW64s7vGbdV-D23-YVGWcTOIeNlMxHpzY"
+    var geoJSON = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userInput + "&key=AIzaSyC_o2Uz1Z9HeKMDbDoQXJwWCI_IE-Onk6U"
 
 
 
